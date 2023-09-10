@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV Generator</title> 
+        <link rel="stylesheet" href="Formleft.css">
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    </head>
+    <form>
+      <div class="container">
+          <div id="form-el">
+            <h1 >CV Generator</h1>
+            <hr>
+            <h2>Personal Info</h2>
+             <p  id="namesF">
+                 Full Name  : <input type="text" name="name" placeholder="Full name" value="" id="namesFi">
+            </p>
+            
+    
+           <p >
+            <p id="r1">Gender :
+               <input type="text" placeholder="Selected gender" id="result" onclick="myFunc(this.value)">
+            </p>
+            <input type="radio" name="gender" value="Male" id="gender" onclick="myFunc(this.value)" >Male
+            <input type="radio" name="gender" value="Female" id="gender" onclick="myFunc(this.value)">Female
+            <input type="radio"  name="gender" value="Others" id="gender" onclick="myFunc(this.value)">Others
+            
+           </p>
+           <textarea placeholder="Write About Yourself" rows="5" cols="40" id="textyour" value=""></textarea>
+           <p id="hob">
+           <p >Skills:</p> 
+           <input type="text" name="Hobbies" value="" placeholder="Write Your Hobby" id="hobby0"></input><br>
+           <input type="text" name="Hobbies" value="" placeholder="Write Your Hobby" id="hobby1"></input><br>
+           <input type="text" name="Hobbies" value="" placeholder="Write Your Hobby" id="hobby2"></input><br>
+           <input type="text" name="Hobbies" value="" placeholder="Write Your Hobby" id="hobby3"></input><br>
+    
+            <textarea placeholder="Write more about Your Hobby" rows="5" cols="40" id="texthobby"></textarea>
+           </p>
+           <p class="imageUp">
+            <p>Upload Image : </p>
+            <input type="file" placeholder="Choose File" id="image-input" accept="image/png,image/jpg,image/jpeg,image/gif">
+           </p>
+
+           <hr>
+
+           <p id="profInfo">
+           <h2>Professional Information</h2>
+           <p>Education</p>
+           <input type="text" name="Education" value="" id="eduHigh" placeholder="High School"><br>
+           <input type="text" name="Education" value="" id="eduInt" placeholder="Intermediate School"><br>
+           <input type="text" name="Education" value="" id="eduCol" placeholder=" College">
+
+
+           <p>Woking Experience</p>
+           <input type="text" name="work" value="" id="work1" placeholder="Enter Where You Have Worked"><br>
+           <input type="text" name="work" value="" id="work2" placeholder="Enter Where You Have Worked"><br>
+           <input type="text" name="work" value="" id="work3" placeholder="Enter Where You Have Worked"><br>
+           
+           
+           
+           
+           <p>Phone Number</p>
+           <input type="tel" name="Phone" value="" id="phn1" placeholder="+91-XXXXXX"><br>
+           <input type="tel" name="Phone" value="" id="phn2" placeholder="Alternate Number"><br>
+
+           <p>Links</p>
+           <input type="email" name="Email" value="" id="email" placeholder="Email"><br>
+           <input type="url" name="link1" value="" id="link1" placeholder="URL"><br>
+           <input type="url" name="link1" value="" id="link2" placeholder="URL"><br>
+           <input type="url" name="link1" value="" id="link3" placeholder="URL"><br>
+          </p>
+
+           <input type="checkbox" value="1" name="assign" id="confirm"  onclick="assignFunc()">
+            I hereby declare that all the info provided above are true. <br>
+          
+           
+           <button id="form-btn" type="button">Submit</button>
+        </div>
+          <div id="cv-el">
+            <h1 >CV Generated</h1>
+            <hr>
+              <div class="cv-container">
+                <div id="left-Item">
+                   <p id="image-el"><img src="https://i.stack.imgur.com/l60Hf.png" style="width: 200px;height: 190px;"></p>
+                </div>
+                <div id="right-Item">
+                    <p id="link-el"></p>
+                </div>
+            </div>
+            <div id="content-Items">
+              <p align="center" style="font-size: 28px;">Personal Information</p>
+               <p id="show-el"></p> 
+            </div>
+            <div id="prof-Items">
+              <p align="center" style="font-size: 28px;">Professional Information</p>
+              <p id="prof-disp"></p>
+            </div>
+          <button id="clear-btn" type="button" onclick="document.location.reload()">Clear All</button>
+          </div>
+      </div>
+      <script src="cvgen.js"></script>
+    </form>
+</html>
